@@ -9,11 +9,16 @@ pipeline{
         stage("Git Checkout"){
             steps{
                 git credentialsId: '95eeda59-576e-4281-b018-162621f3e2d2', url: 'https://github.com/padamsinghinda/jenkins_practice.git'
-                readsh = readFile "dummy.sh"
-                sh "chmod 755 readsh"
-                sh "bash -ex dummy.sh"
+                //readsh = readFile "dummy.sh"
+                //sh "chmod 755 readsh"
+                //sh "bash -ex dummy.sh"
             }
         }
+        stage("Read File"){
+            steps{
+                readsh = readFile "dummy.sh"
+                }
+            }
         stage('Running Unit Tests...') {
             steps{
                 //sh "cd"
