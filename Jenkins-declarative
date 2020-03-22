@@ -9,7 +9,7 @@ pipeline{
         stage("Git Checkout"){
             steps{
                 git credentialsId: '95eeda59-576e-4281-b018-162621f3e2d2', url: 'https://github.com/padamsinghinda/jenkins_practice.git'
-                sh 'chmod -R 755 *.sh'
+                sh "bash chmod -R 755 *.sh"
                 sh "bash -ex dummy.sh"
             }
         }
