@@ -16,7 +16,7 @@ pipeline{
         }
         stage("Read File"){
             steps{
-                readsh = readFile "dummy.sh"
+                readFile "dummy.sh"
                 }
             }
         stage('Running Unit Tests...') {
