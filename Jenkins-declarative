@@ -24,7 +24,7 @@ pipeline{
                 //sh "cd"
                 //sh "bash -ex cicd/run_unit_tests.sh"
                 readFile "dummy.sh"
-                sh "bash -ex dummy.sh"
+                sh "bash -ex $WORKSPACE/dummy.sh"
             }
         }
     }
