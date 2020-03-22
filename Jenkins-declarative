@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage("WELCOME"){
+            steps{
+                echo "welcome to jenkins declarative pipeline tutorial"
+                }
+        }
+        stage("Git Checkout"){
+            steps{
+                git credentialsId: '95eeda59-576e-4281-b018-162621f3e2d2', url: 'https://github.com/padamsinghinda/jenkins_practice.git'
+            }
+        }
+    }
+}
