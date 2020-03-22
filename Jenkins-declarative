@@ -13,6 +13,7 @@ pipeline{
         }
         stage('Running Unit Tests...') {
             steps{
+                cd
                 sh "bash -ex cicd/run_unit_tests.sh"
             }
         }
