@@ -19,6 +19,7 @@ pipeline{
                 fileExists 'dummy.sh'
                 readFile 'dummy.sh'
                 echo pwd()
+                sh 'ls -la'
                 //pwd
                 //la -l
                 //sh 'pwd' //; la -l'
