@@ -19,7 +19,7 @@ pipeline{
                 readFile 'dummy.sh'
                 //pwd
                 //la -l
-                sh 'pwd; la -l'
+                sh 'pwd' //; la -l'
                 }
             }
         stage('Running Unit Tests...') {
