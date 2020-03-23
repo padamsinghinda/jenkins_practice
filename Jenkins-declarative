@@ -23,6 +23,8 @@ pipeline{
             steps{
                 //sh "cd"
                 echo "Running dummy shell script file"
+                sh "pwd; ; la -l;"
+                
                 sh "bash -ex ./dummy.sh"
                 echo "Running unit_tests shell script file"
                 sh "bash -ex ./cicd/run_unit_tests.sh"
