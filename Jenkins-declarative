@@ -22,9 +22,11 @@ pipeline{
         stage('Running Unit Tests...') {
             steps{
                 //sh "cd"
-                //sh "bash -ex cicd/run_unit_tests.sh"
-                readFile "dummy.sh"
-                sh "bash -ex $WORKSPACE/dummy.sh"
+                echo "Running dummy shell script file"
+                sh "bash -ex ./dummy.sh"
+                echo "Running unit_tests shell script file"
+                sh "bash -ex ./cicd/run_unit_tests.sh"
+                //readFile "dummy.sh"
             }
         }
     }
