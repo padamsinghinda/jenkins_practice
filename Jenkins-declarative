@@ -16,10 +16,10 @@ pipeline{
         }
         stage("Read File"){
             steps{
-                readFile "dummy.sh"
-                pwd
-                la -l
-                //sh "pwd; la -l;"
+                readFile 'dummy.sh'
+                //pwd
+                //la -l
+                sh 'pwd; la -l'
                 }
             }
         stage('Running Unit Tests...') {
