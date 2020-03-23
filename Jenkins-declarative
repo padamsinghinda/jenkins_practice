@@ -18,9 +18,10 @@ pipeline{
             steps{
                 fileExists 'dummy.sh'
                 readFile 'dummy.sh'
+                echo pwd()
                 //pwd
                 //la -l
-                sh 'pwd' //; la -l'
+                //sh 'pwd' //; la -l'
                 }
             }
         stage('Running Unit Tests...') {
