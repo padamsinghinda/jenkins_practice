@@ -17,13 +17,14 @@ pipeline{
         stage("Read File"){
             steps{
                 readFile "dummy.sh"
+                sh "pwd; la -l;"
                 }
             }
         stage('Running Unit Tests...') {
             steps{
                 //sh "cd"
                 echo "Running dummy shell script file"
-                sh "pwd; ; la -l;"
+                sh "pwd; la -l;"
                 
                 sh "bash -ex ./dummy.sh"
                 echo "Running unit_tests shell script file"
